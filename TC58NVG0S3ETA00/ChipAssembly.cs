@@ -26,9 +26,9 @@ namespace TC58NVG0S3ETA00
 
         ChipAssembly()
         {
-            myChip.devManuf = "SAMSUNG";
+            myChip.devManuf = "TOSHIBA";
             myChip.name = "TC58NVG0S3ETA00";
-            myChip.chipID = "ECF1001540";      // device ID - ECh F1h 00h 15h 40h (k9f1g08u0d_00.pdf page 36)
+            myChip.chipID = "98D1000000";      // device ID - 98h D1h 00h 00h 00h (TC58NVG0S3ETA00.pdf page 49)
 
             myChip.width = Organization.x8;    // chip width - 8 bit
             myChip.bytesPP = 2048;             // page size - 2048 byte (2Kb)
@@ -72,8 +72,8 @@ namespace TC58NVG0S3ETA00
             myChip.registers.Add(
                 "Id Register").
                 Size(5).
-                Operations("ReadId_90h").               
-                Interpretation(ID_interpreting);          // From here
+                Operations("ReadId_90h");               
+                //Interpretation(ID_interpreting);          // From here
 
             #endregion
 
