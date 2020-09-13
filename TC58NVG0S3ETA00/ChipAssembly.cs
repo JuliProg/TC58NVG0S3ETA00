@@ -58,7 +58,7 @@ namespace TC58NVG0S3ETA00
 
             #region Chip registers (optional)
 
-            //------- Add chip registers (optional)----------------------------------------------------
+            //------- Add chip registers (optional) ----------------------------------------------------
 
             myChip.registers.Add(                   // https://github.com/JuliProg/Wiki/wiki/StatusRegister
                 "Status Register").
