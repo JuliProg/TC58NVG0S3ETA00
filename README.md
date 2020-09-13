@@ -1,6 +1,5 @@
 ![Create new chip](https://github.com/JuliProg/TC58NVG0S3ETA00/workflows/Create%20new%20chip/badge.svg?event=repository_dispatch)
 ![ChipUpdate](https://github.com/JuliProg/TC58NVG0S3ETA00/workflows/ChipUpdate/badge.svg)
-![ChipUpdate](https://github.com/taraskit/TC58NVG0S3ETA00/workflows/ChipUpdate/badge.svg)
 # Join the development of the project ([list of tasks](https://github.com/users/JuliProg/projects/1))
 
 
