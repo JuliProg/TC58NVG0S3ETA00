@@ -10,8 +10,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
 <section class = "listing">
 
-#
-
+#
 ```c#
 
     public class ChipAssembly
@@ -19,8 +18,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         [Export("Chip")]
         ChipPrototype myChip = new ChipPrototype();
 ```
-# Chip parameters
-
+# Chip parameters
 ```c#
 
 
@@ -41,12 +39,11 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
             myChip.vcc = Vcc.v3_3;             // supply voltage
 
 ```
-# Chip operations
-
+# Chip operations
 ```c#
 
 
-            //------- Add chip operations ----------------------------------------------------
+            //------- Add chip operations   https://github.com/JuliProg/Wiki#command-set---------------------------------------------------
 
             myChip.Operations("Reset_FFh").
                    Operations("Erase_60h_D0h").
@@ -54,31 +51,29 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                    Operations("PageProgram_80h_10h");
 
 ```
-# Chip registers (optional)
-
+# Chip registers (optional)
 ```c#
 
 
             //------- Add chip registers (optional)----------------------------------------------------
 
-            myChip.registers.Add(
+            myChip.registers.Add(                   // https://github.com/JuliProg/Wiki/wiki/StatusRegister
                 "Status Register").
                 Size(1).
                 Operations("ReadStatus_70h").
-                Interpretation("SR_Interpreted").   //From ChipPart\SR_Interpreted.dll
+                Interpretation("SR_Interpreted").   
                 UseAsStatusRegister();
 
 
 
-            myChip.registers.Add(
+            myChip.registers.Add(                  // https://github.com/JuliProg/Wiki/wiki/ID-Register
                 "Id Register").
                 Size(5).
                 Operations("ReadId_90h");               
-                //Interpretation(ID_interpreting);          // From here
+                //Interpretation(ID_interpreting);          
 
 ```
-# Interpretation of ID-register values ​​(optional)
-
+# Interpretation of ID-register values ​​(optional)
 ```c#
 
 
@@ -86,6 +81,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         
 ```
 </section>
+
 
 
 
