@@ -55,7 +55,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 ```c#
 
 
-            //------- Add chip registers (optional)----------------------------------------------------
+            //------- Add chip registers (optional) ----------------------------------------------------
 
             myChip.registers.Add(                   // https://github.com/JuliProg/Wiki/wiki/StatusRegister
                 "Status Register").
@@ -81,6 +81,7 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         
 ```
 </section>
+
 
 
 
