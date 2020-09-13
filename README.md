@@ -1,5 +1,6 @@
 ![Create new chip](https://github.com/JuliProg/TC58NVG0S3ETA00/workflows/Create%20new%20chip/badge.svg?event=repository_dispatch)
 ![ChipUpdate](https://github.com/JuliProg/TC58NVG0S3ETA00/workflows/ChipUpdate/badge.svg)
+![ChipUpdate](https://github.com/taraskit/TC58NVG0S3ETA00/workflows/ChipUpdate/badge.svg)
 # Join the development of the project ([list of tasks](https://github.com/users/JuliProg/projects/1))
 
 
@@ -10,7 +11,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
 
 <section class = "listing">
 
-#
+#
+
 ```c#
 
     public class ChipAssembly
@@ -18,7 +20,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
         [Export("Chip")]
         ChipPrototype myChip = new ChipPrototype();
 ```
-# Chip parameters
+# Chip parameters
+
 ```c#
 
 
@@ -39,7 +42,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
             myChip.vcc = Vcc.v3_3;             // supply voltage
 
 ```
-# Chip operations
+# Chip operations
+
 ```c#
 
 
@@ -51,7 +55,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                    Operations("PageProgram_80h_10h");
 
 ```
-# Chip registers (optional)
+# Chip registers (optional)
+
 ```c#
 
 
@@ -73,7 +78,8 @@ Dependency injection, DI based on MEF framework is used to connect the chip to t
                 //Interpretation(ID_interpreting);          // From here
 
 ```
-# Interpretation of ID-register values ​​(optional)
+# Interpretation of ID-register values ​​(optional)
+
 ```c#
 
 
